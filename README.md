@@ -1,1 +1,1 @@
-# rsschool-cv
+https://everysecounts.github.io/rsschool-cv/cv
