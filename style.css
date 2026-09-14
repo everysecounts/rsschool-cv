@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -13,11 +14,16 @@ body {
 }
 
 .header,
-.main {
-  max-width: 1200px;
+.main,
+.footer {
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px 0;
   width: 100%;
+}
+
+.header {
+  padding: 20px 30px;
 }
 
 .main {
@@ -25,6 +31,7 @@ body {
   border-radius: 15px;
   padding: 20px;
   display: flex;
+  flex-direction: column;
 }
 
 .logo {
@@ -41,7 +48,7 @@ body {
   gap: 10px;
   position: sticky;
   top: 0;
-  justify-content: space-between;
+  justify-content: center;
   .list-item {
     font-size: 16px;
     list-style: none;
@@ -57,12 +64,17 @@ body {
   }
 }
 
+.nav {
+  .list {
+    gap: 10px 30px;
+  }
+}
+
 .sidebar {
-  max-width: 300px;
+  max-width: 100%;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
 }
 
@@ -70,12 +82,15 @@ body {
   padding: 10px 0;
   text-align: center;
   width: 100%;
+  .code {
+    text-align: left;
+  }
   .title {
     font-size: 35px;
   }
   .text {
-    font-size: 18px;
-    padding: 5px 0;
+    font-size: 16px;
+    padding: 7px 0;
   }
   .logo {
     margin: 15px auto;
@@ -116,7 +131,64 @@ body {
   }
 }
 
+.project {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  color: #d0d0d0;
+  text-decoration: none;
+  padding: 15px 25px;
+  .project-image {
+    max-width: 500px;
+    filter: grayscale(100%);
+    transition: 0.3s;
+  }
+  .project-info {
+    .project-text {
+      font-size: 16px;
+    }
+  }
+}
 
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  padding: 15px 100px;
+  .footer-link {
+    display: flex;
+    gap: 10px;
+  }
+  .link {
+    list-style-type: none;
+    color:#d0d0d0;
+    text-decoration: none;
+    border-bottom:1px solid transparent;
+  }
+  .footer-logo {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background: #d0d0d0;
+    mask: url("./assets/rs-school-logo.svg") center / contain no-repeat;
+    -webkit-mask: url("./assets/rs-school-logo.svg") center / contain no-repeat;
+    transition: background 0.3s ease;
+  }
+  .copyright {
+    border-bottom:1px solid transparent;
+  }
+}
+
+
+@media screen and (min-width: 800px) {
+  .main {
+    flex-direction: row;
+  }
+  .sidebar {
+    max-width: 300px;
+  }
+}
 
 @media (hover: hover) and (pointer: fine) {
   .list-item:hover {
@@ -138,5 +210,17 @@ body {
       }
     }
   }
+  .footer {
+    .link:hover {
+      border-color: #d0d0d0
+    }
+    .footer-logo:hover {
+      background: #2dbdbd;
+    }
+  }
+  .project:hover {
+    .project-image {
+      filter: grayscale(0);
+    }
+  }
 }
-
