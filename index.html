@@ -4,25 +4,71 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/logo.avif">
   <link rel="stylesheet" href="style.css">
-  <title>rsschool-cv</title>
+  <title>John Doe</title>
 </head>
 <body>
     <header class="header">
       <nav class="nav">
-        <ul>
-          <li><a href="#"></a></li>
+        <ul class="list">
+          <li class="list-item"><a class="link" href="#about">About</a></li>
+          <li class="list-item"><a class="link" href="#skills">Skills</a></li>
+          <li class="list-item"><a class="link" href="#projects">Projects</a></li>
+          <li class="list-item"><a class="link" href="#education">Education</a></li>
+          <li class="list-item"><a class="link" href="#code">Code</a></li>
+          <li class="list-item"><a class="link" href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main class="main">
       <aside class="sidebar">
-        <div>
-          <h1>John Doe</h1>
-          <p>Frontend Developer</p>
-        </div>
+        <section class="section">
+          <img
+            src="./assets/logo.avif"
+            alt="John Doe"
+            class="logo"
+          >
+          <h1 class="title">John Doe</h1>
+          <p class="text">Frontend Developer</p>
+        </section>
+        <section class="section" id="contact">
+          <h2 class="section-title">Contacts</h2>
+          <ul class="list">
+            <li class="list-item">
+              <a class="link" href="mailto:john@example.com">
+                john@example.com
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="link" href="https://github.com/everysecounts">
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="section" id="skills">
+          <h2 class="section-title">Skills</h2>
+          <ul class="list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+          </ul>
+        </section>
       </aside>
       <div class="content">
+        <section class="section" id="about">
+          <h2 class="section-title">About Me</h2>
+          <p class="text">
+            I’m into programming, so I decided to give development a shot - they say it’s a promising field. I’m also into sports and try to spend some time outdoors, otherwise it’s just computers all day, every day. And, well, I’ve actually got my own business - programming is more of a passion project for me.
+          </p>
+        </section>
+        <section class="section" id="code">
+          <h2 class="section-title">Code</h2>
+
+          <pre class="code"><code><span class="keyword">const</span> test = <span class="string">"Hello"</span>;
+          <span class="console">console</span>.log(test);</code></pre>
+        </section>
       </div>
     </main>
 
