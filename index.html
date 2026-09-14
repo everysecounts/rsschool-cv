@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./assets/logo.avif">
+  <link rel="stylesheet" href="style.css">
+  <title>John Doe</title>
+</head>
+<body>
+    <header class="header">
+      <nav class="nav">
+        <ul class="list">
+          <li class="list-item"><a class="link" href="#about">About</a></li>
+          <li class="list-item"><a class="link" href="#skills">Skills</a></li>
+          <li class="list-item"><a class="link" href="#projects">Projects</a></li>
+          <li class="list-item"><a class="link" href="#education">Education</a></li>
+          <li class="list-item"><a class="link" href="#code">Code</a></li>
+          <li class="list-item"><a class="link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main">
+      <aside class="sidebar">
+        <div class="section">
+          <img
+            src="./assets/logo.avif"
+            alt="John Doe"
+            class="logo"
+          >
+          <h1 class="title">John Doe</h1>
+          <p class="text">Frontend Developer</p>
+        </div>
+        <section class="section" id="contact">
+          <h2 class="section-title">Contacts</h2>
+          <ul class="list">
+            <li class="list-item">
+              <a class="link" href="tel:+79991234567">
+                +7 (999) 123-45-67
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="link" href="mailto:john@example.com">
+                john@example.com
+              </a>
+            </li>
+            <li class="list-item">
+              <a class="link" href="https://github.com/everysecounts"  target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section class="section" id="skills">
+          <h2 class="section-title">Skills</h2>
+          <ul class="list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+          </ul>
+        </section>
+        <section class="section" id="education">
+          <h2 class="section-title">Education</h2>
+          <p class="text">Nizhny Novgorod State Technical University</p>
+          <p class="text">Computer Science and Information Technology</p>
+        </section>
+        <section class="section" id="english">
+          <h2 class="section-title">English</h2>
+          <p class="text">B1 — Intermediate</p>
+        </section>
+      </aside>
+      <div class="content">
+        <section class="section" id="about">
+          <h2 class="section-title">About Me</h2>
+          <p class="text">
+            I’m into programming, so I decided to give development a shot - they say it’s a promising field. I’m also into sports and try to spend some time outdoors, otherwise it’s just computers all day, every day. And, well, I’ve actually got my own business - programming is more of a passion project for me.
+          </p>
+        </section>
+        <section class="section" id="code">
+          <h2 class="section-title">Code</h2>
+          <pre class="code"><code>function calculateCartTotal(cart) {
+          let total = 0;
+
+          for (const item of cart) {
+            const itemPrice = item.price * item.quantity;
+            total += itemPrice;
+          }
+
+          return total;
+        }
+
+        function formatPrice(price) {
+          return `${price.toFixed(2)} USD`;
+        }
+
+        function getCartItems(products) {
+          return products.filter((product) => product.quantity > 0);
+        }
+
+        const products = [
+          {
+            name: "Keyboard",
+            price: 80,
+            quantity: 1
+          },
+          {
+            name: "Mouse",
+            price: 45,
+            quantity: 2
+          },
+          {
+            name: "Monitor",
+            price: 250,
+            quantity: 1
+          }
+        ];
+
+        const cart = getCartItems(products);
+        const total = calculateCartTotal(cart);
+
+        console.log("Cart total:", formatPrice(total));</code></pre>
+        </section>
+        <section class="section" id="projects">
+          <h2 class="section-title">Projects</h2>
+          <a
+            class="project"
+            href="https://everysecounts.github.io/rsschool-cv/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="project-image"
+              src="./assets/preview.avif"
+              alt="Project preview"
+            >
+            <div class="project-info">
+              <h3 class="project-title">My CV Project</h3>
+              <p class="project-text">
+                A responsive web application created to practice modern frontend development.
+              </p>
+            </div>
+          </a>
+        </section>        
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-link">
+        <a
+          href="https://github.com/everysecounts"
+          class="link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        <span class="copyright">© 2026</span>
+      </div>
+      <a
+        href="https://rs.school/"
+        class="rs-logo"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="footer-logo"></span>
+      </a>
+    </footer>
+</body>
+</html>
